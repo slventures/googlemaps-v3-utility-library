@@ -847,6 +847,8 @@ function lazy(target, properties, provider) {
         target,
         property,
         {
+            configurable: true,
+            enumerable: true,
             get: function () {
                 let source = provider();
                 delete target[property];
